@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8"/>
+    <title>Echo WebScocket</title>
+</head>
+
+
+<body>
+    <input type="text">
+    <button type="button" class="btn btn-primary form-control">送信</button>
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script>
+       var ws = null;
+       var onOpen = function() {
+           $('button').click(function() {
+               ws.send($('input').val());
+           });
+       };
+       var onMessage = function(e) {
+           $('#message').text(e.data);
+       };
+       var connect = function() {
+           ws = new WebSocket('ws://localhost:' + location.port + '/websocket-sample01/echo');
+           ws.onopen = onOpen;
+           ws.onmessage = onMessage;
+       };
+       connect();
+    </script>
+    <br />
+    <span id="message"></span>
+</body>
+
+</html>
