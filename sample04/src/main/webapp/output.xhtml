@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html>
+
+<html lang="ja"
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://xmlns.jcp.org/jsf/html"
+    xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+    <meta charset="UTF-8" />
+    <title>Sample04: output</title>
+    <h:outputStylesheet library="css" name="style.css" />
+</h:head>
+
+<h:body>
+    <h2>確認</h2>
+    <h:form>
+        <h:panelGrid columns="2" cellspacing="0" border="1"
+            rules="all" columnClasses="c1,c2">
+            <f:facet name="header">
+                panelGridによる表
+            </f:facet>
+            番号<h:outputText value="#{meibo.number}"/>
+            名前<h:outputText value="#{meibo.name}"/>
+        </h:panelGrid>
+        <h:link outcome="index" style="display:block; margin-top:10px">[戻る]</h:link>
+    </h:form>
+</h:body>
+
+</html>

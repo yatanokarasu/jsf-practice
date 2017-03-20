@@ -1,0 +1,31 @@
+
+body {
+    font: 15pt "メイリオ";
+    line-height: 1.5em;
+}
+
+
+h1 {
+    color: red;
+    font: 20px;
+}
+
+.btn {
+    margin-top: 10px;
+    width: 100px;
+    font-size: 0.9em;
+    font-weight: bold;
+    padding: 3px;
+}
+
+.c1 {
+    width: 100px;
+    text-align: center;
+    background-color: #dddddd;
+    padding: 3px;
+}
+
+.c2 {
+    width: 200px;
+    padding: 3px;
+}
