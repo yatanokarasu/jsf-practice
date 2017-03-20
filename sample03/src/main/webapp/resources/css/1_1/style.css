@@ -1,0 +1,11 @@
+
+body {
+    font: 12pt "メイリオ";
+    margin: 30px;
+    line-height: 1.5em;
+}
+
+h1 {
+    color: red;
+    font-size: 1.5em;
+}
